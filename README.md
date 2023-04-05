@@ -7,7 +7,15 @@ The main functions in the module are two that can be used to define a filter ban
 
 **shannon_bands(nc = 24, low = 70, high = 5000)** -- Computes cutoff frequencies for a bank of filters that splits the frequency range (low to high in Hz) into nc number of equally spaced channels on the log frequency scale.  Please note that high, must be less than the Nyquist frequency (at most fs/2 - 1).
 
+And one that uses a filter bank so defined.
+
 **vocode(x, bands, fs)** -- returns a noise vocoded version of the audio samples in x, using frequency bands designed by one of the 'bands()' functions, or any other definition of a bank of bandpass filters.  'fs' is the sampling frequency of the audio in x.
+
+
+See the notebook **using_noise_vocoder.ipynb** for example usage.
+
+-------------------
+
 
 This module is an extension of the excellent vocoder notebook published by Alexandre Chabot-Leclerc ([@AlexChabotL](http://twitter.com/alexchabotl)).   https://github.com/achabotl/vocoder.git
  
